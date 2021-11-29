@@ -1,12 +1,16 @@
-var xhr = new XMLHttpRequest()
-var host = window.location.hostname
-
 function onLoad() {
 
 }
 function fn(){
 	console.log("hi")
 }
+function onFileClickListener(){
+    
+}
 function getFileList(path) {
-    xhr.open("GET",host+'/path/'+path)
+    var jqxhr=$.getJSON("/path?path="+path)
+    .done(function(data){
+        console.log(JSON.stringify(data,null,4))
+        return data
+    })
 }

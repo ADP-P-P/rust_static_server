@@ -1,12 +1,27 @@
 body{
     display: flex;
+    align-items: center;
     flex-direction: column;
-    background: violet;
 	height: 100;
 }
 
 #list_container{
     width: 80%;
     height: 100%;
-    background:blue;
+}
+#item_container{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#file_icon{
+    width: 4.5rem;
+}
+#file_description_container{
+    height: 5rem;
+    width: 70%;
+    margin-left: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0 0 #a1a1a1;
 }

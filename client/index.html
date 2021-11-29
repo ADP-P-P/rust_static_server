@@ -4,12 +4,24 @@
 <head>
 	<meta charset="utf-8" />
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
 </head>
 
-<body >
-	<div id="list_container" onclick="fn()"></div>
+<body>
+	<div id="list_container">
+		<div id="item_container" onclick="onFileClickListener()">
+			<div style="border-radius: 0.5rem;box-shadow: 0.1rem 0.1rem 0 0 #a1a1a1;background: #fdfdfd;">
+				<img id="file_icon" src="img/home.svg">
+			</div>
+			<div id="file_description_container">
+			</div>
+		</div>
+	</div>
+	</div>
+
 </body>
 
 </html>
