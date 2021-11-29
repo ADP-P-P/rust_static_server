@@ -16,11 +16,11 @@ fn launch() -> _ {
         .mount("/home", FileServer::from("client/"))
 }
 
-#[get("/path/<param>")]
-fn list_files(param: &str) -> Json<Vec<FileDecr>> {
+#[get("/path?<path>")]
+fn list_files(path: &str) -> Json<Vec<FileDecr>> {
     let mut v: Vec<FileDecr> = Vec::new();
-    print!("{}",param);
-    let dirs = read_dir(param).unwrap();
+    print!("{}",path);
+    let dirs = read_dir(path).unwrap();
     for i in dirs {
         v.push(FileDecr::extra_meta(i.unwrap()));
     }
